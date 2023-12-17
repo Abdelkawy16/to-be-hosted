@@ -1,0 +1,440 @@
+body {
+    background: white;
+    display: grid;
+    grid-template-columns: 70% auto;
+    height: 100vh;
+    margin: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+video {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 55%;
+    width: 400px;
+    z-index: 1;
+}
+
+.main-container {
+    color: transparent;
+    font-family: 'Montserrat';
+    padding: 4em;
+    width: 75%;
+}
+
+.avatar-container {
+    background: transparent;
+    width: 25%;
+    height: calc(100% - 100px);
+    position: absolute;
+    bottom: 0;
+    margin: 20px;
+}
+
+.avatar-container p {
+    margin-top: 5px;
+}
+
+.avatar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    width: 350px;
+    z-index: 1;
+    background-color: #76cbfc77;
+}
+
+.sketch-container {
+    position: absolute;
+    margin-right: 50px;
+    margin-bottom: 120px;
+    bottom: 0;
+    right: 0;
+    height: 350px;
+    width: 400px;
+    border-radius: 10px;
+    z-index: 3;
+    /* background-color: #76cbfc77; */
+}
+
+.sketch-canvas {
+    width: 100%;
+    height: 90%;
+    background-color: #c8ebff77;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.sketch-dragable {
+    background-color: #75757577;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    height: 10%;
+    border-radius: 0 0 10px 10px;
+
+}
+
+.main-navbar {
+    margin: 10px 20px;
+    width: calc(100% - 40px);
+    position: absolute;
+    top: 0;
+    height: 60px;
+    /* background-color: #000000; */
+}
+
+.auth {
+    float: right;
+    height: 60px;
+}
+
+.auth .grid {
+    font-size: 26px;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.user-img {
+    margin-left: 15px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.chat-box {
+    width: calc(75% - 50px);
+    height: calc(100% - 100px);
+    /* border: 1px solid #A9A9A9; */
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 50px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #f2f6fc;
+    z-index: 1;
+}
+
+/* Chat Messages Styling with Scroll */
+.messages, .viewer-messages {
+    flex: 1;
+    margin-bottom: 55px;
+    height: calc(100% - 120px);
+    width: 100%;
+    overflow-y: auto;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 19px;
+    overflow-x: hidden;
+    margin-top: 20px;
+}
+
+/* Fancy Scrollbar Styles */
+.messages::-webkit-scrollbar .viewer-messages::-webkit-scrollbar {
+    width: 8px;
+}
+
+.messages::-webkit-scrollbar-track, .viewer-messages::-webkit-scrollbar-track {
+    background-color: #C2C2C2;
+    border-radius: 5px;
+}
+
+.messages::-webkit-scrollbar-thumb, .viewer-messages::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #6E6E6E, #6E6E6E);
+    border-radius: 5px;
+}
+
+/* Input Area Styling */
+
+.input-area-container {
+    height: 60%;
+    width: 90%;
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    margin-right: 50px;
+    background-color: #f2f6fc;
+    border-radius: 20px;
+    border: 2px solid #1f51f5;
+}
+
+.input-area-container .input-area {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    background-color: #00265f;
+    border-radius: 0px 0px 20px 20px;
+}
+
+/* Style the "Send" button */
+.input-area button {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #AAAAAA;
+    border: none;
+    border-radius: 25px;
+    /* Add a rounder shape */
+    margin-left: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    /* height: 60px; */
+}
+
+/* Hover effect */
+.input-area #sendBtn:hover {
+    /* background-color: #AAAAAA; */
+    transform: scale(1.05);
+    /* Increase size on hover */
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+    /* Add a subtle shadow */
+}
+
+/* Add a subtle animation when clicked */
+.input-area button:active {
+    transform: scale(0.95);
+    /* Slightly reduce size on click */
+}
+
+.container ul {
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+
+.input-area .input {
+    flex: 1;
+    border: 2px solid #1f51f5;
+    border-radius: 18px;
+    margin-bottom: 10px;
+    outline: none;
+    background-color: #ffffff;
+    height: auto;
+}
+
+#txtMsg {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: calc(100% - 60px);
+    border: 0;
+    background-color: #ffffff;
+    border-radius: 20px;
+    height: 30px;
+    position: relative;
+    bottom: 5px;
+    vertical-align: bottom;
+    /* margin-left: 10px; */
+    font-size: 20px;
+}
+
+#txtMsg:focus {
+    outline: none;
+}
+
+.chat-box .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1px;
+    background-color: #c2c2c2;
+}
+
+.chat-box .header button {
+    padding: 1px 8px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.messages, .viewer-messages,
+.input-area {
+    transition: max-height 0.5s ease-out, padding 0.3s ease-in-out, opacity 0.4s ease-in-out;
+    opacity: 1;
+    position: relative;
+    bottom: 0;
+    width: calc(100% - 50px);
+}
+
+/* .chat-box .title {
+    padding: 5px;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-family: 'Bauhaus 93', sans-serif;
+    font-size: 25px;
+    color: #858181;
+} */
+
+
+/* Style the microphone button */
+.input-area .input #micBtn {
+    font-size: 25px;
+    color: #000000;
+    cursor: pointer;
+    position: relative;
+    padding: 10px 0 0 0;
+    background-color: transparent;
+    border: none;
+    float: right;
+    bottom: 10px;
+    height: 100%;
+    margin-right: 10px;
+}
+
+
+/* Style the microphone button on hover */
+.input-area .input #micBtn:hover {
+    color: #4CAF50;
+}
+
+.input-area .input #attachBtn {
+    font-size: 25px;
+    color: #000000;
+    cursor: pointer;
+    position: relative;
+    padding: 10px 0 0 0;
+    background-color: transparent;
+    border: none;
+    float: left;
+    bottom: 10px;
+    /* margin-right: 10px; */
+}
+
+.input-area .input #attachBtn:hover {
+    color: #4c6faf;
+}
+
+.file-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 0px;
+    cursor: pointer;
+    opacity: 0;
+    display: none;
+}
+
+.collapse-expand {
+    text-decoration: none;
+    background-color: transparent;
+    margin: 10px;
+}
+
+.collapse-expand i {
+    font-size: 23px;
+    padding: 5px;
+    color: #444444;
+}
+
+.new-chat-btn,
+.prev-chat-btn {
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color: transparent;
+    font-weight: bold;
+    margin: 10px;
+    color: #444444;
+    width: 200px;
+}
+
+.new-chat-btn {
+    margin-left: 20px;
+}
+
+.chats {
+    width: 90%;
+    max-height: 250px;
+}
+
+.chat-link {
+    color: #000000;
+}
+
+.a-active {
+    color: #1f51f5;
+}
+
+.delete-chat {
+    border: 0;
+    float: right;
+}
+
+.delete-chat:hover {
+    /* background-color: #AAAAAA; */
+    transform: scale(1.05);
+    /* Increase size on hover */
+    box-shadow: 0px 0px 10px 0px rgba(207, 0, 0, 0.349);
+    /* Add a subtle shadow */
+}
+
+.display-none {
+    display: none;
+}
+
+.my-pic {
+    width: 450px;
+}
+
+/**
+ * ==============================================
+ * Dot Flashing
+ * ==============================================
+ */
+.dot-flashing {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #363636;
+    color: #363636;
+    animation: dot-flashing 1s infinite linear alternate;
+    animation-delay: 0.5s;
+}
+
+.dot-flashing::before,
+.dot-flashing::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+}
+
+.dot-flashing::before {
+    left: -15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #363636;
+    color: #363636;
+    animation: dot-flashing 1s infinite alternate;
+    animation-delay: 0s;
+}
+
+.dot-flashing::after {
+    left: 15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #363636;
+    color: #363636;
+    animation: dot-flashing 1s infinite alternate;
+    animation-delay: 1s;
+}
+
+@keyframes dot-flashing {
+    0% {
+        background-color: #363636;
+    }
+
+    50%,
+    100% {
+        background-color: rgba(152, 128, 255, 0.2);
+    }
+}
