@@ -22,9 +22,25 @@
         <a class="navbar-brand"><img src="./images/new-icon.jpg" alt="" width="60" height="50">
         </a>
         <div class="auth">
-            <a role="button" title="toggle sketch"><i class="fa-solid fa-pencil fa-lg sketch-btn"></i></a>
+            <!-- <a role="button" title="toggle sketch"><i class="fa-solid fa-pencil fa-lg sketch-btn"></i></a>
             <a role="button" title="toggle graph"><i class="fa-solid fa-share-nodes fa-lg graph-btn"></i></a>
-            <a role="button" title="this is menu"><i class="fa-solid fa-grip fa-lg grid"></i></a>
+            <a role="button" title="this is menu"><i class="fa-solid fa-grip fa-lg grid"></i></a> -->
+            <div class="btn-group" role="group">
+                <button type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                    style="background: none; border: none;">
+                    <i class="fa-solid fa-grip fa-lg grid" style="margin-top: 0px;"></i>
+                </button>
+                <div class="dropdown-menu" style="align-items: center; width: 50px;">
+                    <a role="button" title="toggle sketch" style="margin-left: 25%; margin-right: 10px;"><i
+                            class="fa-solid fa-pencil fa-lg sketch-btn"></i></a>
+                    <a role="button" title="toggle graph" style="margin-right: 10px;"><i
+                            class="fa-solid fa-share-nodes fa-lg graph-btn"></i></a>
+                    <label for="fileInput" class="upload-btn" title="attach file" role="button">
+                        <i id="attachBtn" class="fa-solid fa-paperclip fa-lg" aria-hidden="true"></i>
+                    </label>
+                    <input type="file" id="fileInput" class="file-input">
+                </div>
+            </div>
             <a role="button" title="profile">
                 <img class="user-img" src="images/user.jpeg" alt="Avatar">
             </a>
@@ -41,24 +57,22 @@
             </button>
         </p>
         <div class="collapse" id="collapseExample">
-            <div class="card card-body chats">
-                <ul class="list-group" style="max-height: 30%; overflow-y: auto;">
+            <div class="card card-body chats" style="max-width: 210px; margin-left: 65px;">
+                <ul class="list-group" style="max-height: 30%; overflow-y: auto; max-width: 200px;">
                 </ul>
             </div>
         </div>
         <div class="input-area-container">
             <div class="messages">
-                <!-- Messages will be displayed here. This can be populated dynamically using JavaScript -->
+                <ol class="ordered-messages">
+                </ol>
             </div>
             <div class="input-area">
                 <div class="input">
                     <div class="container">
                         <ul>
                         </ul>
-                        <label for="fileInput" class="upload-btn">
-                            <i id="attachBtn" class="fa-solid fa-paperclip" aria-hidden="true"></i>
-                        </label>
-                        <input type="file" id="fileInput" class="file-input">
+
                         <input id="txtMsg" type="text" placeholder="Message AI Architect">
                         <i id="micBtn" class="fa fa-microphone" aria-hidden="true" role="button"></i>
                     </div>
@@ -80,7 +94,7 @@
             <div id="idText" style="position: absolute; bottom: 0;"></div>
         </div>
     </div>
-    <script src="bundle.js"></script>
+    <script type="module" src="bundle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
