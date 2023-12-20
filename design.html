@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Design shape</title>
+    <title>Space Script</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fonts/font-awesome/css/fontawesome.css">
@@ -19,7 +19,7 @@
 
 <body>
     <div class="main-navbar">
-        <a class="navbar-brand"><img src="./images/new-icon.jpg" alt="" width="60" height="50">
+        <a class="navbar-brand"><img src="./images/new-icon.jpg" alt="" width="auto" height="45">
         </a>
         <div class="auth">
             <!-- <a role="button" title="toggle sketch"><i class="fa-solid fa-pencil fa-lg sketch-btn"></i></a>
@@ -57,7 +57,7 @@
             </button>
         </p>
         <div class="collapse" id="collapseExample">
-            <div class="card card-body chats" style="max-width: 210px; margin-left: 65px;">
+            <div class="card chats" style="max-width: 200px; margin-left: 65px; border: none;">
                 <ul class="list-group" style="max-height: 30%; overflow-y: auto; max-width: 200px;">
                 </ul>
             </div>
@@ -69,21 +69,21 @@
             </div>
             <div class="input-area">
                 <div class="input">
+                    <i id="micBtn" class="fa fa-microphone" aria-hidden="true" role="button"></i>
                     <div class="container">
                         <ul>
                         </ul>
 
-                        <input id="txtMsg" type="text" placeholder="Message AI Architect">
-                        <i id="micBtn" class="fa fa-microphone" aria-hidden="true" role="button"></i>
+                        <input id="txtMsg" type="text" placeholder="message SpaceScript . . .">
                     </div>
                 </div>
-                <button id="sendBtn"><i class="fa-solid fa-paper-plane fa-lg"></i></button>
+                <!-- <button id="sendBtn"><i class="fa-solid fa-paper-plane fa-lg"></i></button> -->
             </div>
         </div>
     </div>
 
     <div class="main-container">
-        <div class="sketch-container">
+        <div class="sketch-container display-none">
             <canvas class="sketch-canvas"></canvas>
             <div class="sketch-dragable"></div>
         </div>

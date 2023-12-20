@@ -155,12 +155,12 @@ video {
     height: calc(100% - 280px);
     width: 90%;
     position: absolute;
-    left: 5px;
-    bottom: 5px;
+    left: 0px;
+    bottom: 0px;
     margin-right: 50px;
     background-color: #f2f6fc;
     border-radius: 20px;
-    border: 2px solid #000000;
+    border: 2px solid #919191;
 }
 
 .input-area-container .input-area {
@@ -171,7 +171,7 @@ video {
     left: 0px;
     bottom: 0px;
     background-color: transparent;
-    border-radius: 0px 0px 20px 20px;
+    /* border-radius: 0px 0px 20px 20px; */
 }
 
 /* Style the "Send" button */
@@ -212,7 +212,7 @@ video {
 
 .input-area .input {
     flex: 1;
-    border: 2px solid #030303;
+    border: 2px solid #919191;
     border-radius: 18px;
     margin-bottom: 10px;
     outline: none;
@@ -221,18 +221,18 @@ video {
 }
 
 #txtMsg {
-    padding: 10px;
+    /* padding: 5px; */
     margin-bottom: 10px;
-    width: calc(100% - 60px);
-    border: 0;
+    width: calc(100% - 0px);
+    border: none;
     background-color: #ffffff;
     border-radius: 20px;
     height: 30px;
     position: relative;
-    bottom: 5px;
+    bottom: 3px;
     vertical-align: bottom;
     /* margin-left: 10px; */
-    font-size: 20px;
+    /* font-size: 17px; */
 }
 
 #txtMsg:focus {
@@ -276,14 +276,14 @@ video {
 /* Style the microphone button */
 .input-area .input #micBtn {
     font-size: 25px;
-    color: #000000;
+    color: #727272;
     cursor: pointer;
-    position: relative;
-    padding: 10px 0 0 0;
+    position: absolute;
+    right: 8px;
+    /* padding: 10px 0 0 0; */
     background-color: transparent;
     border: none;
-    float: right;
-    bottom: 10px;
+    bottom: 30px;
     height: 100%;
     margin-right: 10px;
 }
@@ -444,5 +444,5 @@ video {
 }
 
 .add-border{
-    border: 1px solid #000;
+    border: 1px solid #919191;
 }
