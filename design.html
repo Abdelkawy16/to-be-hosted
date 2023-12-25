@@ -19,8 +19,25 @@
 
 <body>
     <div class="main-navbar">
-        <a class="navbar-brand"><img src="./images/new-icon.jpg" alt="" width="auto" height="45">
+        <a class="navbar-brand"><img src="./images/new-icon.jpg" alt="" width="auto" height="35">
         </a>
+        <div class="chat-btns">
+            <p>
+                <a class="collapse-expand" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                    aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fa-solid fa-bars fa-lg"></i>
+                </a>
+                <button class="new-chat-btn" type="button" aria-expanded="false" aria-controls="collapseExample">
+                    New Design
+                </button>
+            </p>
+            <div class="collapse" id="collapseExample">
+                <div class="card chats" style="max-width: 200px; margin-left: 65px; border: none;">
+                    <ul class="list-group" style="max-height: 30%; overflow-y: auto; max-width: 200px;">
+                    </ul>
+                </div>
+            </div>
+        </div>
         <div class="auth">
             <!-- <a role="button" title="toggle sketch"><i class="fa-solid fa-pencil fa-lg sketch-btn"></i></a>
             <a role="button" title="toggle graph"><i class="fa-solid fa-share-nodes fa-lg graph-btn"></i></a>
@@ -47,21 +64,7 @@
         </div>
     </div>
     <div class="avatar-container">
-        <p>
-            <a class="collapse-expand" data-bs-toggle="collapse" href="#collapseExample" role="button"
-                aria-expanded="false" aria-controls="collapseExample">
-                <i class="fa-solid fa-bars fa-lg"></i>
-            </a>
-            <button class="new-chat-btn" type="button" aria-expanded="false" aria-controls="collapseExample">
-                New Design
-            </button>
-        </p>
-        <div class="collapse" id="collapseExample">
-            <div class="card chats" style="max-width: 200px; margin-left: 65px; border: none;">
-                <ul class="list-group" style="max-height: 30%; overflow-y: auto; max-width: 200px;">
-                </ul>
-            </div>
-        </div>
+        
         <div class="input-area-container">
             <div class="messages">
                 <ol class="ordered-messages">

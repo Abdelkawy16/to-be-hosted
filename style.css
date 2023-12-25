@@ -152,7 +152,7 @@ video {
 /* Input Area Styling */
 
 .input-area-container {
-    height: calc(100% - 280px);
+    height: calc(100% - 5px);
     width: 90%;
     position: absolute;
     left: 0px;
@@ -160,7 +160,7 @@ video {
     margin-right: 50px;
     background-color: #f2f6fc;
     border-radius: 20px;
-    border: 2px solid #919191;
+    border: 1px solid #b6b6b6;
 }
 
 .input-area-container .input-area {
@@ -212,7 +212,7 @@ video {
 
 .input-area .input {
     flex: 1;
-    border: 2px solid #919191;
+    border: 2px solid #b6b6b6;
     border-radius: 18px;
     margin-bottom: 10px;
     outline: none;
@@ -336,17 +336,13 @@ video {
 .new-chat-btn,
 .prev-chat-btn {
     border-radius: 10px;
-    padding: 5px 10px;
+    padding: 2px 5px;
     background-color: transparent;
     font-weight: bold;
-    margin: 10px;
+    /* margin: 10px; */
     color: #444444;
     width: 150px;
 }
-
-/* .new-chat-btn {
-    margin-left: 20px;
-} */
 
 .chats {
     width: 90%;
@@ -444,5 +440,12 @@ video {
 }
 
 .add-border{
-    border: 1px solid #919191;
+    border: 1px solid #b6b6b6;
+}
+
+.chat-btns{
+    position: absolute;
+    top: 0;
+    right: 120px;
+    z-index: 5;
 }
