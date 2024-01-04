@@ -48,13 +48,14 @@ video {
 }
 
 .sketch-container {
-    position: absolute;
-    margin-right: 50px;
-    margin-bottom: 120px;
-    bottom: 0;
-    right: 0;
-    height: 350px;
-    width: 400px;
+    /* position: absolute; */
+    /* bottom: 0;
+    right: 0; */
+    margin-top: -20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    height: 100%;
+    width: calc(100% - 40px);
     border-radius: 10px;
     z-index: 3;
     /* background-color: #76cbfc77; */
@@ -62,7 +63,7 @@ video {
 
 .sketch-canvas {
     width: 100%;
-    height: 90%;
+    height: 100%;
     background-color: #c8ebff77;
     border-radius: 10px;
     padding: 5px;
