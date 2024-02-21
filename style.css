@@ -447,7 +447,7 @@ video {
 .chat-btns{
     position: absolute;
     top: 0;
-    right: 120px;
+    right: 150px;
     z-index: 5;
 }
 
@@ -478,4 +478,13 @@ video {
     background-color: #444444c0;
     color: white;
     opacity: 0.7;
+}
+
+.models{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 300px;
+    height: 35px;
+    z-index: 5;
 }
