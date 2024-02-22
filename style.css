@@ -488,3 +488,7 @@ video {
     height: 35px;
     z-index: 5;
 }
+
+.message-container{
+    height: 500px;
+}
